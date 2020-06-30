@@ -1,11 +1,11 @@
 // sequelize配置文件
 export default {
   // 哪个数据库
-  database: 'minishop',
+  database: 'wxshop',
   // 用户名
   username: 'root',
   // 密码
-  password: '123456',
+  password: 'qazwsx123',
   // 地址
   host: '127.0.0.1',
   // 使用什么数据库

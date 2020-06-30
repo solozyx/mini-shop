@@ -24,7 +24,7 @@ CREATE TABLE `banner` (
   `productsId` int(11) NOT NULL,
   `img_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of banner
@@ -45,7 +45,7 @@ CREATE TABLE `category` (
   `description` varchar(100) DEFAULT NULL COMMENT '描述',
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COMMENT='商品类目';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='商品类目';
 
 -- ----------------------------
 -- Records of category
@@ -68,7 +68,7 @@ CREATE TABLE `image` (
   `delete_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8mb4 COMMENT='图片总表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='图片总表';
 
 -- ----------------------------
 -- Records of image
@@ -198,7 +198,7 @@ CREATE TABLE `product` (
   `summary` varchar(50) DEFAULT NULL COMMENT '摘要',
   `img_id` int(11) DEFAULT NULL COMMENT '图片外键',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of product
@@ -247,7 +247,7 @@ CREATE TABLE `product_image` (
   `order` int(11) NOT NULL DEFAULT '0' COMMENT '图片排序序号',
   `product_id` int(11) NOT NULL COMMENT '商品id，外键',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of product_image
@@ -278,7 +278,7 @@ CREATE TABLE `product_property` (
   `delete_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of product_property
@@ -305,7 +305,7 @@ CREATE TABLE `theme` (
   `head_img_id` int(11) NOT NULL COMMENT '专题列表页，头图',
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COMMENT='主题信息表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='主题信息表';
 
 -- ----------------------------
 -- Records of theme
@@ -360,7 +360,7 @@ CREATE TABLE `third_app` (
   `delete_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='访问API的各应用账号密码表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='访问API的各应用账号密码表';
 
 -- ----------------------------
 -- Records of third_app
@@ -381,7 +381,7 @@ CREATE TABLE `user` (
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `openid` (`openid`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of user
@@ -405,10 +405,11 @@ CREATE TABLE `user_address` (
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of user_address
 -- ----------------------------
 INSERT INTO `user_address` VALUES ('2', 'luopeng', '18782933565', '四川123456', '西昌123', '凉山州', '详细地址', null, '6', null);
+
 SET FOREIGN_KEY_CHECKS=1;
